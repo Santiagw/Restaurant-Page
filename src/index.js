@@ -2,6 +2,11 @@ import './styles.css'
 import {LoadHomePage} from './homePage.js'
 
 const content = document.querySelector('#content')
+const header = document.querySelector('header')
+
+function clearPage(){
+    content.innerHTML = ''
+}
 
 function LoadNavBar() {
     const navBar = document.createElement('nav')
@@ -18,10 +23,13 @@ function LoadNavBar() {
     menuBtn.textContent = 'Menu'
     aboutBtn.textContent = 'About'
 
+    menuBtn.onclick = clearPage
+    homeBtn.onclick = ()=> content.appendChild(LoadHomePage())
+
     navBar.append(homeBtn, menuBtn, aboutBtn)
 
     return navBar
 }
 
-content.append(LoadNavBar())
+header.append(LoadNavBar())
 content.appendChild(LoadHomePage())
