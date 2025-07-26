@@ -34,7 +34,7 @@ function LoadHomePage() {
     overlapCard.append(h2, p, orderBtn)
     textWrap.append(h1one, h1two)
 
-    secondImg.append(otherPizza, textWrap)
+    secondImg.append(otherPizzaImg, textWrap)
 
 
     mainImg.classList.add('main-img')
